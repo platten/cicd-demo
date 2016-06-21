@@ -7,7 +7,7 @@
       "network": "BRIDGE",
       "portMappings": [
         {
-          "containerPort": 4044,
+          "containerPort": 4000,
           "hostPort": 0
         }
       ]
