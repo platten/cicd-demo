@@ -3,7 +3,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "idealist/paulblog",
+      "image": "idealist/cicd",
       "network": "BRIDGE",
       "portMappings": [
         {
