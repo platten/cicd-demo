@@ -1,0 +1,38 @@
+{
+  "id": "paulblog",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "idealist/paulblog",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 4044,
+          "hostPort": 0
+        }
+      ]
+    }
+  },
+  "acceptedResourceRoles": [
+    "slave_public"
+  ],
+  "labels": {
+    "lastChangedBy": "paul@idealist.org"
+  },
+  "instances": 1,
+  "cpus": 0.1,
+  "mem": 128,
+  "healthChecks": [
+    {
+      "protocol": "TCP",
+      "gracePeriodSeconds": 200,
+      "intervalSeconds": 30,
+      "portIndex": 0,
+      "timeoutSeconds": 10,
+      "maxConsecutiveFailures": 2
+    }
+  ],
+  "upgradeStrategy": {
+    "minimumHealthCapacity": 0
+  }
+}
